@@ -24,22 +24,30 @@ This project develops an **AI-powered renewable energy management system** that 
 renewable_ai_project_full/
 │
 ├─ data/
-│ ├─ synthetic/ → generated datasets
-│ └─ raw/ → real data (if available)
+│   ├─ synthetic/
+│   │   └─ renewable_data.csv              # Generated 5-year dataset (solar, wind, demand)
+│   └─ raw/                                # Placeholder for real data (optional)
 │
 ├─ notebooks/
-│ └─ EDA_and_model_check.ipynb → main analysis & report
+│   ├─ EDA_and_model_check.ipynb           # Main notebook (EDA, forecasting, optimization results)
+│   └─ .ipynb_checkpoints/                 # Auto-saved notebook states
 │
 ├─ src/
-│ ├─ generate_synthetic_data.py
-│ ├─ models_forecasting.py
-│ ├─ optimizer.py
-│ ├─ simulate_pipeline.py
-│ ├─ metrics.py
-│ ├─ bidding.py
-│ └─ config.py
+│   ├─ __init__.py                         # Marks this as a Python package
+│   ├─ config.py                           # Constants and configuration (zones, capacity, etc.)
+│   ├─ generate_synthetic_data.py          # Creates synthetic dataset
+│   ├─ data_loader.py                      # Handles loading and preprocessing
+│   ├─ features.py                         # Adds lag features and time splits
+│   ├─ models_forecasting.py               # Builds ML forecasting models
+│   ├─ optimizer.py                        # Linear optimization (dispatch, storage, bidding)
+│   ├─ metrics.py                          # Performance metrics (reliability, losses, EBITDA)
+│   ├─ bidding.py                          # Optional dynamic bidding simulation
+│   └─ simulate_pipeline.py                # End-to-end forecasting + optimization simulation
 │
-└─ README.md
+├─ .gitignore                              # Ignores .venv, __pycache__, etc.
+├─ README.md                               # Project overview and run instructions
+├─ requirements.txt                        # (recommended) Python package list
+└─ LICENSE                                 # (optional) Open-source license
 
 
 
