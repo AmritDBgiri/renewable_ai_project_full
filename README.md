@@ -40,3 +40,52 @@ renewable_ai_project_full/
 │ └─ config.py
 │
 └─ README.md
+
+
+
+
+---
+
+## 🧠 How to Run
+
+### 1️⃣ Create and activate virtual environment
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+
+
+2️⃣ Install dependencies
+pip install pandas numpy scikit-learn pulp tqdm matplotlib
+
+3️⃣ Generate data
+python -m src.generate_synthetic_data
+
+4️⃣ Run forecasting + optimization
+python -m src.simulate_pipeline
+
+5️⃣ View report
+
+Open the Jupyter Notebook:
+
+jupyter notebook notebooks/EDA_and_model_check.ipynb
+
+📊 Results (Sample)
+Metric	Value
+Reliability	78.8%
+Loss Ratio	0.00%
+EBITDA Margin	60.27%
+🚀 Next Steps
+
+Integrate real IMD weather & IEX price data
+
+Replace regression models with LSTMs
+
+Deploy dashboard with Streamlit or FastAPI
+
+👨‍💻 Author
+
+Amrit Kumar Giri
+B.Tech, IIIT Bhagalpur
+📧 amritgiri@example.com
+
+🌐 github.com/AmritDBgiri
