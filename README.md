@@ -84,6 +84,4 @@ Deploy dashboard with Streamlit or FastAPI
 
 Amrit Kumar Giri
 B.Tech, IIIT Bhagalpur
-📧 amritgiri@example.com
-
-🌐 github.com/AmritDBgiri
+github.com/AmritDBgiri
